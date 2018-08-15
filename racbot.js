@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
 var bot_token = null;
 
 var file_reader = require('readline').createInterface({
@@ -11,18 +10,7 @@ file_reader.on('line', function(line) {
   console.log("FETCHING TOKEN");
   console.log(line);
   bot_token = line;
-})
-
-var file_reader = require('readline').createInterface({
-  input: require('fs').createReadStream('token.txt')
 });
-
-file_reader.on('line', function(line) {
-  console.log("FETCHING TOKEN");
-  console.log(line);
-  bot_token = line;
-})
-
 
 var facts = [
    'One hypothesis for the dark fur around a raccoon\'s eyes is that it may help reduce glare and enhance night vision.',
@@ -76,14 +64,7 @@ client.on('message', msg => {
 });
 
 function startBot(){
-  client.loginWithToken(bot_token, out);
-}
-
-function output(error, token){
-  if (error) {
-    console.log("Error Logging in with token ${error}");
-    client.login(bot_token);
-  }
+  client.login(bot_token);
 }
 
 setTimeout(startBot, 5000);
