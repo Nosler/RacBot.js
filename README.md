@@ -32,6 +32,6 @@ https://nodejs.org/en/download/package-manager
   1. Ensure that it is readable by only by the owner, run ``chmod 400 token.txt``
 3. Open tmux via the command: ``tmux``
 4. Finally, start the bot with the command ``sudo node racbot.js``
-5. Detatch from your tmux session via ``Ctrl-B``, then ``D``
+5. Detach from your tmux session via ``Ctrl-B``, then ``D``
 
 **Your bot should now be supplying knowledge-hungry denizens of your server Raccoon facts via the simple command "!fact".**
