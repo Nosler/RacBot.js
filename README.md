@@ -23,7 +23,7 @@ https://nodejs.org/en/download/package-manager
 2. Run  ``npm install discord.js``
 2. If that doesn't work, run ``sudo apt-get update``, then try again
 
-## Install tmux
+#### Install tmux
 - Run ``sudo apt-get install tmux``
 
 ### Installing and Running the Bot
