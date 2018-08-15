@@ -75,12 +75,14 @@ client.on('message', msg => {
   }
 });
 
-yield sleep(5000);
-client.loginWithToken(bot_token, out);
+function startBot(){
+  client.loginWithToken(bot_token, out);
+}
 
 function output(error, token){
   if (error) {
     console.log("Error Logging in with token ${error}");
-    yield sleep(5000);
     client.login(bot_token);
 }
+
+setTimeout(startBot, 5000);
