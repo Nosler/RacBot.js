@@ -1,8 +1,5 @@
-# RacBot.js
+## Raccoon Facts Installation Instructions
 
-A Discord.js-powered Discord bot for all your Raccoon Fact needs.
-
-## Installation Instructions
 
 ### Create a Discord Application Bot:
 1. Log into your Discord account at:
@@ -16,17 +13,14 @@ https://discordapp.com/developers/applications/
 https://discordapp.com/oauth2/authorize?client_id=CLIENTID&scope=bot
 8. Select the server you wish to add it to
 
-
 #### Install Discord.js
-1. Install Node.js:
-https://nodejs.org/en/download/package-manager
-2. Run  ``npm install discord.js``
+1. Run  ``npm install discord.js``
 2. If that doesn't work, run ``sudo apt-get update``, then try again
 
 
 ### Installing and Running the Bot
 1. Move the ``rac_facts`` directory to a location of your choosing
-2. Paste your bot token inside the included file **token.txt**
+2. Create a file **token.txt** within /rac_facts/, containing only your bot token.
   1. Ensure that it is readable by only by the owner, run ``chmod 400 token.txt``
 3. Finally, start the bot with the command ``sudo ./racbot.js``
 
