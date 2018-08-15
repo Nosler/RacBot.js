@@ -1,27 +1,28 @@
 const Discord = require('discord.js');
-var token = null;
-
-var file_reader = require('readline').createInterface({
-  input: require('fs').createReadStream('token.txt')
-});
-
-file_reader.on('line', function(line) {
-  console.log("FETCHING TOKEN");
-  console.log(line);
-  token = line;
-})
-
-var file_reader = require('readline').createInterface({
-  input: require('fs').createReadStream('token.txt')
-});
-
-file_reader.on('line', function(line) {
-  console.log("FETCHING TOKEN");
-  console.log(line);
-  token = line;
-})
-
 const client = new Discord.Client();
+
+var bot_token = null;
+
+var file_reader = require('readline').createInterface({
+  input: require('fs').createReadStream('token.txt')
+});
+
+file_reader.on('line', function(line) {
+  console.log("FETCHING TOKEN");
+  console.log(line);
+  bot_token = line;
+})
+
+var file_reader = require('readline').createInterface({
+  input: require('fs').createReadStream('token.txt')
+});
+
+file_reader.on('line', function(line) {
+  console.log("FETCHING TOKEN");
+  console.log(line);
+  bot_token = line;
+})
+
 
 var facts = [
    'One hypothesis for the dark fur around a raccoon\'s eyes is that it may help reduce glare and enhance night vision.',
@@ -74,4 +75,12 @@ client.on('message', msg => {
   }
 });
 
-client.login(token);
+yield sleep(5000);
+client.loginWithToken(bot_token, out);
+
+function output(error, token){
+  if (error) {
+    console.log("Error Logging in with token ${error}");
+    yield sleep(5000);
+    client.login(bot_token);
+}
