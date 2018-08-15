@@ -27,11 +27,10 @@ https://nodejs.org/en/download/package-manager
 - Run ``sudo apt-get install tmux``
 
 ### Installing and Running the Bot
-1. Move the ``rac_facts`` directory to a location of your choosing
-2. Paste your bot token inside the included file **token.txt**
+1. Paste your bot token inside the included file **token.txt**
   1. Ensure that it is readable by only by the owner, run ``chmod 400 token.txt``
-3. Open tmux via the command: ``tmux``
-4. Finally, start the bot with the command ``sudo node racbot.js``
-5. Detach from your tmux session via ``Ctrl-B``, then ``D``
+2. Open tmux via the command: ``tmux``
+3. Finally, start the bot with the command ``sudo node racbot.js``
+4. Detach from your tmux session via ``Ctrl-B``, then ``D``
 
 **Your bot should now be supplying knowledge-hungry denizens of your server Raccoon facts via the simple command "!fact".**
