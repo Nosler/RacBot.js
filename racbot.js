@@ -54,6 +54,11 @@ var facts = [
    'The percentage of urban raccoons sleeping in abandoned or occupied houses varies from 15-43%. With the lowest being Washginton DC, USA and the highest being Kassel, Germany.'
 ];
 
+client.on('disconnect', function(err, code) {
+    console.log('Disconnected: ', code, ' for reason: ', err);
+    bot.connect();
+});
+
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
