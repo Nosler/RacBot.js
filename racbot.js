@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
 var token = null;
 
 var file_reader = require('readline').createInterface({
@@ -11,6 +10,18 @@ file_reader.on('line', function(line) {
   console.log(line);
   token = line;
 })
+
+var file_reader = require('readline').createInterface({
+  input: require('fs').createReadStream('token.txt')
+});
+
+file_reader.on('line', function(line) {
+  console.log("FETCHING TOKEN");
+  console.log(line);
+  token = line;
+})
+
+const client = new Discord.Client();
 
 var facts = [
    'One hypothesis for the dark fur around a raccoon\'s eyes is that it may help reduce glare and enhance night vision.',
@@ -63,5 +74,4 @@ client.on('message', msg => {
   }
 });
 
-console.log("TOKEN");
 client.login(token);
