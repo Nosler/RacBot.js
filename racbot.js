@@ -10,7 +10,11 @@ file_reader.on('line', function(line) {
   console.log("FETCHING TOKEN");
   console.log("Line: ", line);
   bot_token = line;
+<<<<<<< HEAD
   console.log("bot_token: ", bot_token);
+=======
+  console.log("bot_token:, ", bot_token);
+>>>>>>> 9dd9590a16c1193257b8c4219b47a63b4bcafba8
 });
 
 var facts = [
