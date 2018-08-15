@@ -8,8 +8,8 @@ var file_reader = require('readline').createInterface({
 
 file_reader.on('line', function(line) {
   console.log("FETCHING TOKEN");
-  console.log(line);
-  bot_token = line;
+  bot_token = line.slice(0, line.length-1);
+  console.log(bot_token);
 });
 
 var facts = [
