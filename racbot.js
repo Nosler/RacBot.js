@@ -7,6 +7,7 @@ var file_reader = require('readline').createInterface({
 });
 
 file_reader.on('line', function(line) {
+  console.log("FETCHING TOKEN");
   console.log(line);
   token = line;
 })
@@ -62,4 +63,5 @@ client.on('message', msg => {
   }
 });
 
+console.log("TOKEN");
 client.login(token);
