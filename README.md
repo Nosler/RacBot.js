@@ -1,4 +1,4 @@
-# RacBot.js
+# RacBotJS
 
 A Discord.js-powered Discord bot for all your Raccoon Fact needs.
 
